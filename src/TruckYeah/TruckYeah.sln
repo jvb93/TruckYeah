@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TruckYeah", "TruckYeah\TruckYeah.csproj", "{6A659CA8-C2C1-4EAC-ACF4-E75F5B640860}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TruckYeah.Tests", "TruckYeah.Tests\TruckYeah.Tests.csproj", "{8B888D3C-493B-43B2-8900-2F32F4D3F0F8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A659CA8-C2C1-4EAC-ACF4-E75F5B640860}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A659CA8-C2C1-4EAC-ACF4-E75F5B640860}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A659CA8-C2C1-4EAC-ACF4-E75F5B640860}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A659CA8-C2C1-4EAC-ACF4-E75F5B640860}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B888D3C-493B-43B2-8900-2F32F4D3F0F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B888D3C-493B-43B2-8900-2F32F4D3F0F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B888D3C-493B-43B2-8900-2F32F4D3F0F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B888D3C-493B-43B2-8900-2F32F4D3F0F8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
