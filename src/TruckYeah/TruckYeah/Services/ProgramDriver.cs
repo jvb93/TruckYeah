@@ -5,7 +5,7 @@ using TruckYeah.Models;
 
 namespace TruckYeah.Services
 {
-    class ProgramDriver : IProgramDriver
+    public class ProgramDriver : IProgramDriver
     {
         private readonly IFileReaderService _fileReader;
         private readonly IValidatorService _validator;
