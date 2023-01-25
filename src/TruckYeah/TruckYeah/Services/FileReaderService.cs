@@ -20,6 +20,7 @@ namespace TruckYeah.Services
             }
             catch (Exception ex)
             {
+                // let the user know there was a problem and gracefully return an empty list
                 Console.WriteLine("Error trying to read file: " + filePath);
                 Console.WriteLine(ex.Message);
                 return new List<string>();
