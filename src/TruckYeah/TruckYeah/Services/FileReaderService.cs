@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -6,12 +7,23 @@ namespace TruckYeah.Services
     class FileReaderService : IFileReaderService
     {
         // this is impossible to unit test since it depends on system I/O
-        // leave it as a 1-liner to minimize test coverage impacts
+        // keep it as small as possible to minimize hit to test coverage metrics
         // just gotta trust it works, and test around it
         // manual e2e testing will confirm if this actually works
-        public List<string> ReadLinesFromFile(string filePath)
+        public List<string> ReadLinesFromFile()
         {
-            return System.IO.File.ReadLines(filePath).ToList();
+            string filePath = "";
+            try
+            {
+                filePath = Console.ReadLine();
+                return System.IO.File.ReadLines(filePath).ToList();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error trying to read file: " + filePath);
+                Console.WriteLine(ex.Message);
+                return new List<string>();
+            }
         }
     }
 }

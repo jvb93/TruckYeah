@@ -4,6 +4,6 @@ namespace TruckYeah.Services
 {
     public interface IFileReaderService
     {
-        public List<string> ReadLinesFromFile(string filePath);
+        public List<string> ReadLinesFromFile();
     }
 }

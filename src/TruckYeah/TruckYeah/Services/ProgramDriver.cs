@@ -22,12 +22,10 @@ namespace TruckYeah.Services
         {
             // blah blah boilerplate "read the file" code 
             Console.WriteLine("Enter the path to your address file: ");
-            var filePath = Console.ReadLine();
-            var addresses = _fileReader.ReadLinesFromFile(filePath);
+            var addresses = _fileReader.ReadLinesFromFile();
 
             Console.WriteLine("Enter the path to your drivers file: ");
-            filePath = Console.ReadLine();
-            var drivers = _fileReader.ReadLinesFromFile(filePath);
+            var drivers = _fileReader.ReadLinesFromFile();
 
             // Check to see that there are enough drivers for each address, and vice-versa...
             // if not, just exit early because pebcak 
@@ -58,8 +56,8 @@ namespace TruckYeah.Services
                 // since we are sorted by score, we work from most optimal to least optimal, throwing out the rest after all the unique address and drivers have been used
                 if (!usedTokens.ContainsKey(score.Value.Driver) && !usedTokens.ContainsKey(score.Value.Address))
                 {
-                    usedTokens.Add(score.Value.Driver, score.Value.Score);
-                    usedTokens.Add(score.Value.Address, score.Value.Score);
+                    usedTokens.TryAdd(score.Value.Driver, score.Value.Score);
+                    usedTokens.TryAdd(score.Value.Address, score.Value.Score);
                     Console.WriteLine(
                         $"Address: {score.Value.Address}, Driver: {score.Value.Driver}, SS: {score.Value.Score}");
                 }

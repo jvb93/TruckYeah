@@ -6,7 +6,7 @@ namespace TruckYeah.Services
     {
         public bool AreThereEnoughDriversForEachDelivery(List<string> addresses, List<string> drivers)
         {
-            return addresses.Count == drivers.Count;
+            return addresses?.Count == drivers?.Count;
         }
     }
 }
