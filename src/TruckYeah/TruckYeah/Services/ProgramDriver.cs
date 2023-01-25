@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace TruckYeah.Services
 {
@@ -17,11 +19,13 @@ namespace TruckYeah.Services
 
         public void Run()
         {
-            Console.WriteLine("Enter the path to your address file");
-            var addresses = _fileReader.GetAddressesFromFile();
+            Console.WriteLine("Enter the path to your address file: ");
+            var filePath = Console.ReadLine();
+            var addresses = _fileReader.ReadLinesFromFile(filePath);
 
-            Console.WriteLine("Enter the path to your drivers file");
-            var drivers = _fileReader.GetDriverNamesFromFile();
+            Console.WriteLine("Enter the path to your drivers file: ");
+            filePath = Console.ReadLine();
+            var drivers = _fileReader.ReadLinesFromFile(filePath);
 
             if (_validator.AreThereEnoughDriversForEachDelivery(addresses, drivers))
             {
@@ -30,11 +34,19 @@ namespace TruckYeah.Services
                 return;
             }
 
+            var scores = new Dictionary<Tuple<string, string>, double>();
             foreach (var address in addresses)
             {
                 foreach (var driver in drivers)
                 {
+                    var score = _scoring.ScorePair(address, driver);
+                    scores.Add(new Tuple<string, string>(address, driver), score );
                 }
+            }
+
+            foreach (var scorePair in scores.OrderByDescending(score=> score.Value))
+            {
+                Console.WriteLine(scorePair.Key.Item1 + " " + scorePair.Key.Item2 + " Score: " + scorePair.Value);
             }
         }
     }

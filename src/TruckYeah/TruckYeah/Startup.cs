@@ -14,6 +14,7 @@ namespace TruckYeah
                     services.AddScoped<IProgramDriver, ProgramDriver>();
                     services.AddScoped<IFileReaderService, FileReaderService>();
                     services.AddScoped<IValidatorService, ValidatorService>();
+                    services.AddScoped<IScoringService, ScoringService>();
                 })
                 .Build();
         }
