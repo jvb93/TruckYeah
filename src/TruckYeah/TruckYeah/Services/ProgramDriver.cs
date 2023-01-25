@@ -19,7 +19,7 @@ namespace TruckYeah.Services
         {
             Console.WriteLine("Enter the path to your address file");
             var addresses = _fileReader.GetAddressesFromFile();
-            
+
             Console.WriteLine("Enter the path to your drivers file");
             var drivers = _fileReader.GetDriverNamesFromFile();
 
