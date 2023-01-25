@@ -1,6 +1,4 @@
-﻿using System;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
+﻿using Microsoft.Extensions.DependencyInjection;
 using TruckYeah.Services;
 
 namespace TruckYeah
@@ -11,6 +9,7 @@ namespace TruckYeah
         {
             using (var serviceHost = Startup.BuildHost())
             {
+                // dependency injection because I am a real enterprise developer
                 using (var scope = serviceHost.Services.CreateScope())
                 {
                     var serviceProvider = scope.ServiceProvider;

@@ -13,6 +13,5 @@ namespace TruckYeah.Services
         {
             return System.IO.File.ReadLines(filePath).ToList();
         }
-        
     }
 }
