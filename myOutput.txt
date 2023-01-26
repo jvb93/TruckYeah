@@ -1,0 +1,7 @@
+Address: 2957 Diamond Street, #330, San Francisco, CA, 28465, Driver: Cynthia Chamberton, SS: 19.5
+Address: 1210 Bedford Avenue, Cherry Hill, WA 39572, Driver: Robert Cloutier, SS: 13.5
+Address: 24 N Colgate Avenue, Longport, NJ 22552, Driver: Lydia Johnson, SS: 13.5
+Address: 3 Chesterfield Road, Sewell, GA 40284, Driver: Brandon McDonald, SS: 12
+Address: 430 Paddock Court, Landington, FL 19475, Driver: Thomas Moreno, SS: 12
+Address: 18 Sequoia Drive, Berlin, TX 12345, Driver: Charlie Smithson, SS: 11.25
+Address: 1804 Sycamore Street, Haddon Heights, MA 34552, Driver: Sandra Branski, SS: 9
